@@ -11,6 +11,18 @@
 <body>
 
 	<?php require 'menu.php'; ?>
+	<?php 
+	    if(isset($_SESSION['customer'])){
+			require 'db_connect.php';
+		}else{
+
+		
+	?>
+    購入履歴を表示するには、ログインしてください。
+	<?php 
+		}
+	?>
+
 	
 </body>
 
