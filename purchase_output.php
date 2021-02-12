@@ -24,7 +24,7 @@
 		$stm->bindValue(':customer_id',$_SESSION['customer']['id'],PDO::PARAM_INT);
 		if($stm->execute()){
 			foreach ($_SESSION['product'] as $product_id => $product){
-				$sql ="INSERT INTO purchase_detall VALUES(:purchase_id,:product_id,:count)";
+				$sql ="INSERT INTO purchase_detail VALUES(:purchase_id,:product_id,:count)";
 				$stm = $pdo->prepare($sql);
 
 				$stm->bindValue(':purchase_id',$purchase_id,PDO::PARAM_INT);
